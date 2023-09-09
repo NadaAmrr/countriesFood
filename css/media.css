@@ -1,0 +1,79 @@
+:root{
+    font-size: 17px;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 65%;
+  }
+  .card-det {
+    flex-direction: column;
+}
+.card-det .card-det-content {
+  width:100%;
+}
+ .search input{
+    width: 100%;
+  }
+  .card{
+    width: 100%;
+  }
+  .list .card {
+    width: 100%;
+  }
+  .card-det .card-det-content{
+    width: 100%;
+  }
+  .contact form{
+    flex-direction: column;
+  }
+  .form-content{
+    width: 100%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .search input{
+    width: 100%;
+  }
+  .card{
+    width: calc(calc(100% - var(--gap) * 1) / 2);
+  }
+.card-det {
+  flex-direction: column;
+}
+.card-det .card-det-content{
+  width: 100%;
+}
+.contact form{
+  flex-direction: column;
+}
+.form-content{
+  width: 100%;
+}
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .card{
+    width: calc(calc(100% - var(--gap) * 2) / 3);
+  }
+  .card-det {
+    flex-direction: row;
+  }
+  .form-content{
+    width: calc(calc(100% - var(--gap) ) / 2);
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .card-det {
+    flex-direction: row;
+  }
+  .form-content{
+    width: calc(calc(100% - var(--gap) ) / 2);
+  }
+}
+@media screen and (min-width: 1201px) {
+  .card-det {
+    flex-direction: row;
+  }
+  .form-content{
+    width: calc(calc(100% - var(--gap) ) / 2);
+  }
+}

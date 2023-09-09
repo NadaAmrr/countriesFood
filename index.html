@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!--=== Font Awesome Library Icon ===-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--=== Main Style Sheet ===-->
+    <link rel="stylesheet" href="css/main.css" />
+    <!--=== Media Style Sheet ===-->
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+    <nav>
+        <div id="sidebar" class="sidebar">
+            <ul>
+                <li><a href="#search" onclick="searchFun()">Search</a></li>
+                <li><a  onclick="categories()">Categories</a></li>
+                <li><a href="#area" onclick="area()">Area</a></li>
+                <li> <a href="#ingredients" onclick="ingredients()">Ingredients</a></li>
+                <li> <a href="#ContactUs" onclick="contact()">Contact Us</a></li>
+            </ul>
+            <footer>
+                <div class="icons">
+                    <a href="http://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="http://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="http://facebook.com" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                </div>
+                <div class="copy-right">
+                    <p>Copyright Nada 2023 All Rights <br>Reserved.</p>
+                </div>
+            </footer>
+        </div>
+        <ul class="sidebarClose">
+            <img src="images/logo.png" alt="">
+            <li class="close-icon icon" id="icon-close" onclick="iconClose()"><i id="icon-change"  class="fa-2x fa-solid fa-xmark"></i></li>
+            <ul class="icons">
+                
+                <a href="http://facebook.com" target="_blank"><li class="fa-solid fa-globe d-block"></li></a>
+                <a href="http://facebook.com" target="_blank"><li class="fa-solid fa-share-nodes"></li></a>
+            </ul>
+        </ul>
+    </nav>
+    <!-- List -->
+    <section id="list" class="list bg-section hide fullHeight">
+      
+        <div class="container">
+            <div class="cards" id="list-card">
+            </div>
+    </section>
+    <!-- Meals -->
+    <section id="meals" class="meals bg-section show fullHeight">
+        <div class="container">
+            <div class="cards meals-cards" id="meals-card">
+            </div>
+    </section>
+    <!-- category -->
+    <section id="category" class="category bg-section hide fullHeight">
+        <div class="container">
+            <div class="cards category-card" id="category-card">
+
+            </div>
+    </section>
+    <!-- Meal -->
+    <section id="meal-det" class="meal-det bg-section hide fullHeight">
+        <div class="container">
+            <div class="card-det" id="card-det">
+            </div>
+        </div>
+    </section>
+    <!-- Search section -->
+    <section id="search" class="search bg-section hide fullHeight" >
+        <div class="container fullHeight">
+            <div class="search-content">
+                <input type="text" placeholder="Search by Name" oninput="search(this.value)">
+                <input type="text" placeholder="Search by fist letter" maxlength="1" oninput="search(this.value)">
+            </div>
+            <div class="cards search-cards"  id="search-card">
+            </div>
+        </div>
+    </section>
+    <!-- Contact section -->
+    <section id="contact" class="contact bg-section fullHeight hide">
+
+        <div class="container">
+            <form action="">
+                <div class="form-content">
+                    <input type="text" placeholder="Enter Your Name" oninput="checkRegex(this.value , 'name' )">
+                    <div class="alert alert-danger hide" id="name">
+                        <p>Special characters and numbers not allowed</p>
+                    </div>
+                </div>
+                <div class="form-content"> 
+                    <input type="email" placeholder="Enter Your Email" oninput="checkRegex(this.value , 'email' )">
+                    <div class="alert alert-danger hide" id="email">
+                        <p>Email not valid *exemple@yyy.zzz</p>
+                    </div>
+                </div>
+                <div class="form-content">
+                    <input type="text" placeholder="Enter Your Phone" oninput="checkRegex(this.value , 'phone' )">
+                    <div class="alert alert-danger hide" id="phone">
+                        <p>Enter valid Phone Number</p>
+                    </div>
+                </div>
+                <div class="form-content">
+                    <input type="number" placeholder="Enter Your Age" oninput="checkRegex(this.value , 'age' )">
+                    <div class="alert alert-danger hide" id="age">
+                        <p>Enter valid age</p>
+                    </div>
+                </div>
+                <div class="form-content">
+                    <input type="text" placeholder="Enter Your Password" oninput="checkRegex(this.value , 'password' )" id="pass">
+                    <div class="alert alert-danger hide" id="password">
+                        <p>Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+                    </div>
+                </div>
+                <div class="form-content">
+                    <input type="text" placeholder="Repassword" oninput="checkRegex(this.value , 'repassword' )" id="repass">
+                    <div class="alert alert-danger hide" id="repassword">
+                        <p>Enter valid repassword</p>
+                    </div>
+                </div>
+
+                <button type="submit" id="submit" class="btn btn-main">Submit</button>
+            </div>
+        </form>
+  
+
+    </section>
+    <div id="loading" class="hide">
+        <i class="fa-solid fa-spinner fa-5x fa-spin"></i>
+    </div>
+  
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
